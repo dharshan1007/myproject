@@ -1,7 +1,7 @@
  # docker-compose.yaml
   version: '3.8'
   services:
-    jenkins:
+    web:
       image: dharshan1007/myweb:0.0.2
       privileged: true
       user: root
