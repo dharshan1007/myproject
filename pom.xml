@@ -5,7 +5,7 @@
 	<artifactId>myweb</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.5</version>
-	<name>sampleapp</name>
+	<name>myproject</name>
 	
 	<!-- Demo on Github Webhooks-->
 
@@ -60,6 +60,10 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>2.19</version>
         </plugin>
+	     <plugin>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.2.2</version>
+    </plugin>
     </plugins>
 </build>
 	
