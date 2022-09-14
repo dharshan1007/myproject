@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: demo-deployment
   labels:
-    app: demo-app
+    app: newapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo-app
+      app: newapp
   template:
     metadata:
       labels:
-        app: demo-app
+        app: newapp
     spec:
       containers:
-      - name: demo-app
-        image: interviewdot/cicd-k8s-demo:latest
+      - name: newapp
+        image: dharshan1007/myweb:0.0.2
         ports:
         - containerPort: 8081
 ---
@@ -26,7 +26,7 @@ metadata:
   name: demo-service
 spec:
   selector:
-    app: demo-app
+    app: newapp
   ports:
     - port: 8081
       targetPort: 8081
@@ -41,4 +41,4 @@ spec:
   minAvailable: 2
   selector:
     matchLabels:
-      app: demo-app
+      app: newapp
